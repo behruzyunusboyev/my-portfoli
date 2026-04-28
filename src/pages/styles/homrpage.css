@@ -41,7 +41,7 @@
 .matn h1{
     font-size: 40px;
     color: white;
-    margin-left: -20px;
+    /* margin-left: -20px; */
     position: relative;
     /* margin-bottom: 40px; */
 }
@@ -71,9 +71,12 @@
     /* background-color: red; */
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 10px;
+    /* background-color: red; */
     text-align: left;
     position: relative;
+    align-items: center;
+    justify-content: space-around;
 }
 .home_item{
     width: 100%;
@@ -81,13 +84,15 @@
     /* background-color: blue; */
     display: flex;
     align-items:center ;
-    justify-content: start;
+    /* justify-content: start; */
     position: relative;
     left: 20px;
     gap: 20px;
 }
 .home_item h1{
     font-size: 30px;
+    /* background-color: red; */
+    height: 100%;
 }
 .home_item p{
     font-size: 20px;
@@ -95,4 +100,8 @@
 .rasm2{
     width: 30px;
     margin-right: 10px;
+}
+.malum{
+    /* background-color: red; */
+    height: 100%;
 }

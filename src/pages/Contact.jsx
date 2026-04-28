@@ -1,6 +1,6 @@
-import github_icon from "../pages/github_icon.jpg"
-import email_icon from "../pages/email_icon.jpg"
-import tg_icon from "../pages/tg_icon.jpg"
+import github_icon from "../pages/rasmlar/github_icon.jpg"
+import email_icon from "../pages/rasmlar/email_icon.jpg"
+import tg_icon from "../pages/rasmlar/tg_icon.jpg"
 import "../pages/styles/contact.css"
 import { useRef } from "react"
 function Cuntact(){

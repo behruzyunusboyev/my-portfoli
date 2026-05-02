@@ -5,6 +5,7 @@ import "../src/App.css"
 import Cuntact from './pages/Contact'
 import About from './pages/about'
 import Projectlar from './pages/Projectlar'
+import GetCountry from './pages/getcountry'
 function App() {
   return (
     <BrowserRouter>
@@ -18,7 +19,7 @@ function App() {
       <div style={{padding:'20px'}}>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
-          <Route path='/project' element={<Projects/>}/>
+          <Route path='/project' element={<GetCountry />}/>
           <Route path='/contact' element={<Cuntact />}/>
           <Route path='/about'  element={<About />}/>
           <Route path='/projects' element={<Projectlar />}/>

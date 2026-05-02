@@ -11,16 +11,10 @@
     /* justify-content: center;\ */
     justify-items: center;
 }
-.element3{
-    grid-column: 1 / -1;
-    /* background-color: blue; */
-    display: flex;
-    align-items: center;
-    /* justify-content: center; */
-}
+
 /* liveInput start */
 .live_div{
-    width : 1000px;
+    width : 500px;
     border: 1px solid black;
     border-radius:10px ;
     display: flex;

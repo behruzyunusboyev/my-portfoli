@@ -6,6 +6,7 @@ import Cuntact from './pages/Contact'
 import About from './pages/about'
 import Projectlar from './pages/Projectlar'
 import GetCountry from './pages/getcountry'
+import CurrencyConvertor from './pages/convertor'
 function App() {
   return (
     <BrowserRouter>
@@ -15,6 +16,7 @@ function App() {
           <Link to='/project' className='links'>Project</Link>
           <Link to='/contact'  className='links'>Aloqada</Link>
           <Link to='/projects' className='links'>My Projects</Link>
+          <Link to='/convertor' className='links'>Currency Convertor</Link>
       </nav>
       <div style={{padding:'20px'}}>
         <Routes>
@@ -23,6 +25,7 @@ function App() {
           <Route path='/contact' element={<Cuntact />}/>
           <Route path='/about'  element={<About />}/>
           <Route path='/projects' element={<Projectlar />}/>
+          <Route path='/convertor' element={<CurrencyConvertor />}/>
         </Routes>
 
       </div>

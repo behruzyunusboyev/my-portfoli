@@ -1,5 +1,6 @@
 import React, {useState, useEffect, use} from "react";
 import axios from "axios";
+import "./styles/convertor.css";
 
 function CurrencyConvertor() {
     const [rates, setRates] = useState([]);
@@ -32,9 +33,9 @@ function CurrencyConvertor() {
     }, [rates, fromCurrency, toCurrency, amount]);
     
     return(
-        <div>
+        <div className="convertor">
             <h2>Currency Convertor</h2>
-            <div>
+            <div className="miqdor">
                 <label htmlFor="amount">Amount:</label>
                 <input
                     type="number"
@@ -43,7 +44,9 @@ function CurrencyConvertor() {
                     onChange={(e) => setAmount(parseFloat(e.target.value) || 0)}
                 />
             </div>
-            <div>
+            <div className="sellects">
+
+            <div className="sellect">
                 <label htmlFor="fromCurrency">Dan:</label>
                 <select value={fromCurrency} onChange={(e) => setFromCurrency(e.target.value)}>
                     {rates.map(r => (
@@ -54,7 +57,7 @@ function CurrencyConvertor() {
                 </select>
             </div>
 
-            <div>
+            <div className="sellect">
                 <label htmlFor="toCurrency">Ga:</label>
                 <select value={toCurrency} onChange={(e) => setToCurrency(e.target.value)}>
                     {rates.map(r => (
@@ -64,8 +67,11 @@ function CurrencyConvertor() {
                     ))}
                 </select>
             </div>
-            <div>
-                <h3>natija</h3>
+
+            </div>
+
+            <div className="natija">
+                <h3>natija :</h3>
                 <p>{amount} {fromCurrency} = {result} {toCurrency}</p>
             </div>
         </div>

@@ -70,7 +70,7 @@ function GetCountry() {
                 return(
                     <div key={item.name.common} className="card" onClick={() => setBorders(item.borders ? item.borders[0] : "")}>
                         <img src={item.flags.svg} alt={item.name.common} className="flag" />
-                        <h3>nomi {item.name.common}</h3>
+                        <h2> {item.name.common}</h2>
                         <p><strong>Poytaxt:</strong> {item.capital ? item.capital[0] : "N/A"}</p>
                         <p><strong>Qit'a:</strong> {item.continents ? item.continents[0] : "N/A"}</p>
                         <p><strong>Chegaralar:</strong> {item.borders ? item.borders.join(", ") : "N/A"}</p>

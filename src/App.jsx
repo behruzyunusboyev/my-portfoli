@@ -5,30 +5,26 @@ import "../src/App.css"
 import Cuntact from './pages/Contact'
 import About from './pages/about'
 import Projectlar from './pages/Projectlar'
-import GetCountry from './pages/getcountry'
+import GetCountry from './pages/BigProjects/getcountry'
 import CurrencyConvertor from './pages/convertor'
-import MovieSearch from './MovieSearch'
+import MovieSearch from './pages/BigProjects/MovieSearch'
 function App() {
   return (
     <BrowserRouter>
       <nav className='App_nav'>
           <Link to='/'         className='links'>Bosh sahifa</Link>
           <Link to='/about'    className='links'>About</Link>
-          <Link to='/project' className='links'>Project</Link>
+          <Link to='/BigProjects' className='links'> Big Projects</Link>
           <Link to='/contact'  className='links'>Aloqada</Link>
           <Link to='/projects' className='links'>My Projects</Link>
-          <Link to='/convertor' className='links'>Currency Convertor</Link>
-          <Link to='/movies' className='links'>Movie Search</Link>
       </nav>
       <div style={{padding:'20px'}}>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
-          <Route path='/project' element={<GetCountry />}/>
+          <Route path='/BigProjects' element={<GetCountry />}/>
           <Route path='/contact' element={<Cuntact />}/>
           <Route path='/about'  element={<About />}/>
           <Route path='/projects' element={<Projectlar />}/>
-          <Route path='/convertor' element={<CurrencyConvertor />}/>
-          <Route path='/movies' element={<MovieSearch />}/>
         </Routes>
 
       </div>

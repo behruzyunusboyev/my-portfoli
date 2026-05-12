@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import "./pages/styles/MovieSearch.css";
+import "../styles/MovieSearch.css";
 
 function MovieSearch() {
     const [query, setQuery] = useState("");
@@ -32,16 +32,24 @@ function MovieSearch() {
         }
     }
     const MovieDetails = (movie) =>{
-        return(
-            <div className="movie-details">
-                <h2>{movie.Title}</h2>
-                <img src={movie.Poster} alt={movie.Title} />
-                <p>Year: {movie.Year}</p>
-                <p>Genre: {movie.Genre}</p>
-                <p>Director: {movie.Director}</p>
-                <p>Plot: {movie.Plot}</p>
-            </div>
-        )
+        console.log('bosildi');
+        try{
+        const response = axios.get(`https://www.omdbapi.com/?i=${movie.imdbID}&apikey=${API_key}`);
+        setSelect(response.data);
+        }catch(error){
+            console.error("Error fetching movie details:", error);
+        }
+
+        // return(
+        //     <div className="movie-details">
+        //         <h2>{movie.Title}</h2>
+        //         <img src={movie.Poster} alt={movie.Title} />
+        //         <p>Year: {movie.Year}</p>
+        //         <p>Genre: {movie.Genre}</p>
+        //         <p>Director: {movie.Director}</p>
+        //         <p>Plot: {movie.Plot}</p>
+        //     </div>
+        // )
     }
     return(
         <div className="main">
@@ -60,7 +68,10 @@ function MovieSearch() {
             ) : (
                 <div className="movies">
                     {movies.map((movie) => (
-                        <div key={movie.imdbID} className="movie" onClick={() => getMovieDetails(movie.imdbID)}>
+                        <div key={movie.imdbID} className="movie" onClick={() => getMovieDetails(movie.imdbID)}
+                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
+                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                        >
                             <img src={movie.Poster} alt={movie.Title} />
                             <h2>{movie.Title}</h2>
                             <p>Year: {movie.Year}</p>
@@ -69,6 +80,16 @@ function MovieSearch() {
                     ))}
                 </div>
             )}
+            {(sellect && (
+                <div className="movie-details" style={{zIndex:"9999"}}>
+                    <h2>{sellect.Title}</h2>
+                    <img src={sellect.Poster} alt={sellect.Title} />
+                    <p>Year: {sellect.Year}</p>
+                    <p>Genre: {sellect.Genre}</p>
+                    <p>Director: {sellect.Director}</p>
+                    <p>Plot: {sellect.Plot}</p>
+                </div>
+            ))}
         </div>
     )
 

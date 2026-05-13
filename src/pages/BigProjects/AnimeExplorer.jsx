@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-import '../styles/AnimeExplorer.css'
+import '../styles/AnimeEplorer.css'
 
-function App() {
+function AnimeExplorer() {
   const [animeList, setAnimeList] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
   const [loading, setLoading] = useState(false);
@@ -85,4 +85,5 @@ function App() {
     </>
   )
 }
-export default App
+
+export default AnimeExplorer;

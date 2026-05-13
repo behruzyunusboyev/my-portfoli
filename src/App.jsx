@@ -1,13 +1,13 @@
 import {BrowserRouter, Routes, Route, Link} from 'react-router-dom'
-import Projects from './pages/Proyects'
-import Homepage from './pages/Homepage'
+import Homepage from './pages/Kichik_Proyectlar/Homepage'
 import "../src/App.css"
-import Cuntact from './pages/Contact'
-import About from './pages/about'
-import Projectlar from './pages/Projectlar'
-import GetCountry from './pages/BigProjects/getcountry'
-import CurrencyConvertor from './pages/convertor'
-import MovieSearch from './pages/BigProjects/MovieSearch'
+import Cuntact from './pages/Kichik_Proyectlar/Contact'
+import About from './pages/Kichik_Proyectlar/about'
+import Projectlar from './pages/Kichik_Proyectlar/Projectlar'
+// import GetCountry from './pages/BigProjects/getcountry'
+// import CurrencyConvertor from './pages/convertor'
+// import MovieSearch from './pages/BigProjects/MovieSearch'
+import Bignavbar from './pages/BigProjects/bignavber'
 function App() {
   return (
     <BrowserRouter>
@@ -21,7 +21,8 @@ function App() {
       <div style={{padding:'20px'}}>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
-          <Route path='/BigProjects' element={<GetCountry />}/>
+          <Route path='/BigProjects/*' element={<Bignavbar />} />
+          {/* <Route path='/BigProjects' element={<Bignavbar />}/> */}
           <Route path='/contact' element={<Cuntact />}/>
           <Route path='/about'  element={<About />}/>
           <Route path='/projects' element={<Projectlar />}/>

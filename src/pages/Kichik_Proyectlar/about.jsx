@@ -1,4 +1,4 @@
-import './styles/about.css'
+import '../styles/about.css'
 import { FaInstagram } from "react-icons/fa";
 import { FaTelegram } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";

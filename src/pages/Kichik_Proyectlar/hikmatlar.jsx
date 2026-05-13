@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import {useEffect} from 'react'
 import QuoteCard from './QuoteCard';
-import "../pages/styles/hikmatlar.css"
+import '../styles/hikmatlar.css'
 function Hikmatlar() {
 
   const [quote, setQuote] = useState(null);

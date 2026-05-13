@@ -1,6 +1,6 @@
-import '../pages/styles/homrpage.css'
-import rasm1 from '../pages/rasmlar/homepage_img.jpg'
-import rasm2 from "../pages/rasmlar/ptichka.jpg.png"
+import '../styles/homrpage.css'
+import rasm1 from '../rasmlar/homepage_img.jpg'
+// import rasm2 from "../pages/rasmlar/ptichka.jpg.png"
 import { FaUser, FaMapMarkerAlt, FaBriefcase, FaProjectDiagram } from "react-icons/fa";
 function Homepage() {
     return(

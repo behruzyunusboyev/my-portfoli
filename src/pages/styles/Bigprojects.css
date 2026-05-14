@@ -1,10 +1,14 @@
+
 .big_main{
     margin-top: -30px;
-    background-color: red;
+    /* background-color: red; */
     width: 2000px; 
-    height: 220vh;
+    height: 300vh;
     display: flex;
     justify-content: center;
+      background-image: url(/src/pages/rasmlar/homepage_bg_img.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .nav_big{
     /* margin-left: 480px; */

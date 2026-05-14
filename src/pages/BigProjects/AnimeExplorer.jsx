@@ -28,6 +28,7 @@ function AnimeExplorer() {
 }
   useEffect(() => {
       getAnime();
+      setError(null);
   }, [currentPage, searchTerm] );
 
   const handleSearch = (e) => {
@@ -52,7 +53,9 @@ function AnimeExplorer() {
     }
     return pages;
   };
-
+  // if (error) {
+  //   return <p>Error: {error}</p>;
+  // }
   return (
     <>
       <section id="center">
@@ -62,7 +65,7 @@ function AnimeExplorer() {
             type="text"
             placeholder="Search for anime..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
+            onChange={(e) => setSearchTerm(e.target.value) }
           />
           <button type="submit">Search</button>
         </form>

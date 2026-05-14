@@ -52,9 +52,9 @@ function MovieSearch() {
         // )
     }
     return(
-        <div className="main">
+        <div className="main_movie">
             <h1>Movie Search</h1>
-            <form onSubmit={searchMovies}>
+            <form onSubmit={searchMovies} className="form_movie">
                 <input
                     type="text"
                     placeholder="Search for movies..."
@@ -81,15 +81,18 @@ function MovieSearch() {
                 </div>
             )}
             {(sellect && (
-                <div className="movie-details" style={{zIndex:"9999", backgroundColor:"white", padding:"20px", borderRadius:"10px", marginTop:"20px"}}>
+                <div className="movie-details" style={{zIndex:"9999",  padding:"20px", borderRadius:"10px", marginTop:"20px"}}>
+                    <div className="img_h2">
                     <h2>{sellect.Title}</h2>
                     <img src={sellect.Poster} alt={sellect.Title} />
-                    <div className="texts">
+                    </div>
+                    <div className="movie_texts">
                     <p>Year: {sellect.Year}</p>
                     <p>Genre: {sellect.Genre}</p>
                     <p>Director: {sellect.Director}</p>
                     <p>Plot: {sellect.Plot}</p>
                     </div>
+                    <button onClick={() => setSelect(null)} className="close-button">X</button>
                 </div>
             ))}
         </div>

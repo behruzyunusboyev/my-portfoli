@@ -59,7 +59,7 @@ function AnimeExplorer() {
   return (
     <>
       <section id="center">
-        <h1 className='h11'>Anime Explorer</h1>
+        {/* <h1 className='h11'>Anime Explorer</h1> */}
         <form onSubmit={handleSearch} className='fromm'>
           <input
             type="text"

@@ -2,11 +2,11 @@
 .big_main{
     margin-top: -30px;
     /* background-color: red; */
-    width: 2000px; 
-    height: 300vh;
+    width: 2400px; 
+    height: 220vh;
     display: flex;
     justify-content: center;
-      background-image: url(/src/pages/rasmlar/homepage_bg_img.jpg);
+    background-image: url(/src/pages/rasmlar/homepage_bg_img.jpg);
     background-size: cover;
     background-repeat: no-repeat;
 }

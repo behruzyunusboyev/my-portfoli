@@ -10,9 +10,9 @@ function Projectlar(){
         <div className="main_projects" >
             <Clock className='project'/>
             <Counter className='project'/>
-            <LiveInput className='project'/>
             <Weather />
             <Hikmatlar />
+            <LiveInput className='project'/>
             {/* <Products /> */}
         </div>
     )

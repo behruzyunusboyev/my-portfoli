@@ -88,14 +88,8 @@ function Hikmatlar() {
     </div >
         <div id="hik_btns">
           <button onClick={getQuote} style={{
-          background:"black",
-          color:"white",
-          width:"120px",
-          height:"60px",
-          borderRadius:"30px",
-          fontSize:"15px",
-          fontWeight:"bold"
-        }}>Yangi hikmat</button>
+          
+        }} className='hik_btn2'>Yangi hikmat</button>
 
         {/* <button 
         onClick={createQ}  

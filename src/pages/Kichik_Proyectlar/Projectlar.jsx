@@ -4,6 +4,7 @@ import LiveInput from '../projects/liveInput'
 import Weather from '../projects/weather'
 import '../styles/projectlar.css'
 import Hikmatlar from './hikmatlar'
+import SearchBook from '../projects/SeartchBook'
 // import Products from './projects/products'
 function Projectlar(){
     return(
@@ -14,6 +15,7 @@ function Projectlar(){
             <Hikmatlar />
             <LiveInput className='project'/>
             {/* <Products /> */}
+            <SearchBook />
         </div>
     )
 }

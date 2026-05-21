@@ -3,7 +3,7 @@ import Homepage from './pages/Kichik_Proyectlar/Homepage'
 import "../src/App.css"
 import Cuntact from './pages/Kichik_Proyectlar/Contact'
 import About from './pages/Kichik_Proyectlar/about'
-import Projectlar from './pages/Kichik_Proyectlar/Projectlar'
+import Projectlar from './pages/projects/Projectlar'
 // import GetCountry from './pages/BigProjects/getcountry'
 // import CurrencyConvertor from './pages/convertor'
 // import MovieSearch from './pages/BigProjects/MovieSearch'

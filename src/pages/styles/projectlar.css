@@ -2,7 +2,7 @@
     margin-top: 70px;
     width: 1500px;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
     color: white;
     gap: 20px;
     /* background-color: red; */
@@ -14,32 +14,74 @@
 
 /* liveInput start */
 .live_div{
-    width : 500px;
-    border: 1px solid black;
-    border-radius:10px ;
-    display: flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    gap:0px ;
-    height:200px;
-    background-color: black;
-    box-shadow: 10px 10px 25px rgba(0, 255, 255, 0.5);
+    width: 500px;
+    height: 260px;
 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+
+    background: #050816;
+    border: 1px solid rgba(0,255,255,0.2);
+    border-radius: 20px;
+
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.45);
+
+    color: white;
+    transition: 0.3s;
 }
+
+.live_div:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 0 35px rgba(0, 255, 255, 0.6);
+}
+
 .live_h1{
-    font-size: 30px;
-    /* background-color: blue; */
-    height: 5px;
+    font-size: 38px;
+    font-weight: bold;
+    margin: 0;
+    color: white;
 }
+
 .live_inp{
-    width: 200px;
-    height: 30px;
+    width: 340px;
+    height: 45px;
+
+    border-radius: 12px;
+    border: 1px solid rgba(0,255,255,0.3);
+
+    background: #0b1023;
+    color: white;
+
+    padding-left: 15px;
+    font-size: 17px;
+
+    outline: none;
+
+    box-shadow: 0 0 10px rgba(0,255,255,0.15);
+
+    transition: 0.3s;
 }
+
+.live_inp:focus{
+    border: 1px solid #00ffff;
+    box-shadow: 0 0 15px rgba(0,255,255,0.5);
+}
+
+.live_inp::placeholder{
+    color: rgba(255,255,255,0.5);
+}
+
 .live_matn{
-    font-size: 25px;
-    height: 5px;
-    /* background-color: blue; */
+    font-size: 28px;
+    font-weight: bold;
+
+    color: #00ff66;
+
+    margin: 0;
 }
 /* clock start */
 .clock_div{

@@ -11,7 +11,7 @@ function Translator() {
   const [sinonim, setSinonim] = useState('')
   const [sinonim1, setSinonim1] = useState('')
   const [sinonim2, setSinonim2] = useState('')
-
+  const [status, setStatus] = useState('')
   
   const handleTranslate = async () => {
     if (!text) return;  
@@ -31,9 +31,11 @@ function Translator() {
       // Natija responseData.translatedText ichida keladi
       if (response.data && response.data.responseData) {
         setTranslatedText(response.data.responseData.translatedText);
-        setSinonim(response.data.matches[1].translation)
+        setSinonim(response.data.responseStatus)
         setSinonim1(response.data.matches[2].translation)
         setSinonim2(response.data.matches[3].translation)
+        setStatus(response.data.matches[1].translation)
+        // console.log(response.data.responseStatus)
         // setAlter(response.)
       } else {
         alert("Tarjima topilmadi.");
@@ -217,9 +219,10 @@ function Translator() {
         {translatedText}
       </p>
       <div className="snonims">
-        <p>{sinonim && sinonim}</p>
-        <p>{sinonim1 && sinonim1}</p>
-        <p>{sinonim2 && sinonim2}</p>
+        <small>{sinonim}</small>
+        <small>, {sinonim1}</small>
+        <small>, {sinonim2}</small>
+        <small>, {status}</small>
       </div>
     </div>
   )}

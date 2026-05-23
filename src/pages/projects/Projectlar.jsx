@@ -4,7 +4,7 @@ import LiveInput from './liveInput'
 import Weather from './weather'
 import '../styles/projectlar.css'
 import Hikmatlar from '../Kichik_Proyectlar/hikmatlar'
-import SearchBook from './SeartchBook'
+// import SearchBook from './SeartchBook'
 import Translator from './Translate'
 // import Products from './projects/products'
 function Projectlar(){

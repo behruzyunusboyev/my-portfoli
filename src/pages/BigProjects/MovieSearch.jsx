@@ -57,44 +57,41 @@ function MovieSearch() {
             <form onSubmit={searchMovies} className="form_movie">
                 <input
                     type="text"
-                    placeholder="Search for movies..."
+                    placeholder="Film izlash..."
                     value={query}
                     onChange={(e) => setQuery(e.target.value)}
                 />
-                <button type="submit">Search</button>
+                <button type="submit">Izlash</button>
             </form>
             {loading ? (
-                <p>Loading...</p>
+                <p>Yuklanmoqda...</p>
             ) : (
                 <div className="movies">
                     {movies.map((movie) => (
-                        <div key={movie.imdbID} className="movie" onClick={() => getMovieDetails(movie.imdbID)}
-                        onMouseOver={(e) => e.currentTarget.style.transform = 'scale(1.05)'}
-                        onMouseOut={(e) => e.currentTarget.style.transform = 'scale(1)'}
-                        >
+                        <div key={movie.imdbID} className="movie" onClick={() => getMovieDetails(movie.imdbID)}>
                             <img src={movie.Poster} alt={movie.Title} />
                             <h2>{movie.Title}</h2>
-                            <p>Year: {movie.Year}</p>
-                            <p>Type: {movie.Type}</p>
+                            <p>Yil: {movie.Year}</p>
+                            <p>Tur: {movie.Type}</p>
                         </div>
                     ))}
                 </div>
             )}
-            {(sellect && (
-                <div className="movie-details" style={{zIndex:"9999",  padding:"20px", borderRadius:"10px", marginTop:"20px"}}>
+            {sellect && (
+                <div className="movie-details">
                     <div className="img_h2">
-                    <h2>{sellect.Title}</h2>
-                    <img src={sellect.Poster} alt={sellect.Title} />
+                        <h2>{sellect.Title}</h2>
+                        <img src={sellect.Poster} alt={sellect.Title} />
                     </div>
                     <div className="movie_texts">
-                    <p>Year: {sellect.Year}</p>
-                    <p>Genre: {sellect.Genre}</p>
-                    <p>Director: {sellect.Director}</p>
-                    <p>Plot: {sellect.Plot}</p>
+                        <p>Yil: {sellect.Year}</p>
+                        <p>Janr: {sellect.Genre}</p>
+                        <p>Rejissyor: {sellect.Director}</p>
+                        <p>Syujet: {sellect.Plot}</p>
                     </div>
-                    <button onClick={() => setSelect(null)} className="close-button">X</button>
+                    <button onClick={() => setSelect(null)} className="close-button">✕</button>
                 </div>
-            ))}
+            )}
         </div>
     )
 

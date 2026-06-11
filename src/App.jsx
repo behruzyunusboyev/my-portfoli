@@ -18,7 +18,7 @@ function App() {
           <Link to='/contact'  className='links'>Aloqada</Link>
           <Link to='/projects' className='links'>My Projects</Link>
       </nav>
-      <div style={{padding:'20px'}}>
+      <div style={{padding:'0px', width:'100%', height:'100%'}}>
         <Routes>
           <Route path='/' element={<Homepage/>}/>
           <Route path='/BigProjects/*' element={<Bignavbar />} />

@@ -4,6 +4,7 @@ import GetCountry from './getcountry'
 import MovieSearch from './MovieSearch'
 import "../styles/Bigprojects.css"
 import SearchBook from './SeartchBook'
+import Chat from './chat/chat'
 function Bignavbar() {
   return (
     <div className='big_main'>
@@ -12,6 +13,7 @@ function Bignavbar() {
           <Link to='/BigProjects/country' className='links_big'>Country search</Link>
           <Link to='/BigProjects/movie' className='links_big'>Movie Search</Link>
           <Link to='/BigProjects/book' className='links_big'>Search Book</Link>
+          <Link to='/BigProjects/chat' className='links_big'>Chat</Link>
       </nav>
       <div style={{ padding: '20px' }}>
 
@@ -21,6 +23,7 @@ function Bignavbar() {
           <Route path='country' element={<GetCountry />} />
           <Route path='movie' element={<MovieSearch />} />
           <Route path='book' element={<SearchBook />} />
+          <Route path='chat' element={<Chat />} />
         </Routes>
         {/* <Routes>
           <Route path='/anime' element={<AnimeExplorer />} />

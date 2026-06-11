@@ -59,32 +59,31 @@ function AnimeExplorer() {
   return (
     <>
       <section id="center">
-        {/* <h1 className='h11'>Anime Explorer</h1> */}
         <form onSubmit={handleSearch} className='fromm'>
           <input
             type="text"
-            placeholder="Search for anime..."
+            placeholder="Anime izlash..."
             value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value) }
+            onChange={(e) => setSearchTerm(e.target.value)}
           />
-          <button type="submit">Search</button>
+          <button type="submit">Izlash</button>
         </form>
-        {loading && <p>Loading...</p>}
-        {error && <p>Error: {error}</p>}
+        {loading && <p>Yuklanmoqda...</p>}
+        {error && <p>Xato: {error}</p>}
         <div className="anime-list">
           {animeList.map((anime) => (
             <div key={anime.mal_id} className="anime-card">
               <img src={anime.images.jpg.image_url} alt={anime.title} />
               <h3>{anime.title}</h3>
-              <p>Score: {anime.score ?? 'N/A'}</p>
-              <a href={anime.url} target="_blank" rel="noopener noreferrer">More Info</a>
+              <p>Reyting: {anime.score ?? 'N/A'}</p>
+              <a href={anime.url} target="_blank" rel="noopener noreferrer">Batafsil</a>
             </div>
           ))}
         </div>
         <div className="pagination">
           {renderPagination()}
         </div>
-       </section>
+      </section>
     </>
   )
 }

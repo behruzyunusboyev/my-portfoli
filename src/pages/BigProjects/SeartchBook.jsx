@@ -53,12 +53,12 @@ function SearchBook(){
                 <input type="text"
                     value={book}
                     onChange={(e) => setBook(e.target.value)}
-                    placeholder="search for books"
+                    placeholder="Kitob izlash..."
                     className="book_int"
                 />
-                <button type="Submit" className="book_btn">search</button>
-                {leading && <p>qidirilmoqda .. </p>}
-                {error && <p style={{color:'red'}}>{error}</p>}
+                <button type="submit" className="book_btn">Izlash</button>
+                {leading && <p>Qidirilmoqda...</p>}
+                {error && <p style={{color:'#ef4444'}}>{error}</p>}
             </form>
             
             <div className="items">
